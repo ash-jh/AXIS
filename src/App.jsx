@@ -176,7 +176,7 @@ export default function BridgeHealthDashboard() {
   }));
 
   return (
-    <div className="min-h-screen bg-amber-100 p-8 flex items-start justify-center">
+    <div className="min-h-screen bg-blue-200 p-8 flex items-start justify-center">
       <div className="w-full max-w-6xl">
         <header className="mb-6">
           <h1 className="text-2xl font-semibold">AXIS - Automated eXamination & Insight System</h1>
