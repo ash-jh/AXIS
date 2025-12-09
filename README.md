@@ -1,16 +1,46 @@
-# React + Vite
+# Bridge Structural Health Monitoring Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The **Bridge Structural Health Monitoring Dashboard** is a modern, responsive web application designed to monitor the structural health of bridges using vibration and sensor data. It allows engineers, researchers, and maintenance personnel to upload CSV datasets, automatically analyze key metrics, visualize trends, detect anomalies, and generate comprehensive PDF reports.
 
-Currently, two official plugins are available:
+The dashboard emphasizes usability and clarity, making it accessible for non-technical users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. CSV Upload
+- Drag-and-drop or click-to-upload functionality.
+- Automatic column detection and validation.
+- Checks for numeric values and missing data.
+- Displays a preview of the uploaded dataset.
 
-## Expanding the ESLint configuration
+### 2. Data Processing & Analysis
+- Computes key bridge health metrics:
+  - **RMS (Root Mean Square)** vibration
+  - **Peak** vibration events
+  - **Frequency spectrum (FFT)**
+  - Trend analysis
+  - **Anomaly detection** using z-scores
+- Provides a **bridge condition indicator**: Normal, Needs Attention, or Critical.
+- Shows real-time processing messages and loading indicators.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Visualization
+- **Vibration vs Time** line chart.
+- **Frequency spectrum** line chart for detecting dominant vibration frequencies.
+- Highlights detected anomalies with indices and amplitude values.
+- Interactive charts with selectable columns for analysis.
+
+### 4. Report Generation
+- Generates **PDF reports** summarizing:
+  - Bridge metadata
+  - Key statistics (RMS, Peak, anomalies)
+  - Graph snapshots (Vibration and Frequency spectrum)
+  - Overall bridge health assessment
+- Reports can be exported directly from the dashboard.
+
+### 5. Quick Actions
+- Re-run analysis on the uploaded dataset.
+- Clear the dashboard to start a new analysis.
+
+---
