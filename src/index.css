@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.belleza {
+  font-family: "Belleza", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
