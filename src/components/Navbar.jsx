@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-// use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 
 const CardNav = ({
   logo,
@@ -193,15 +193,17 @@ const CardNav = ({
               </div>
               <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
                 {item.links?.map((lnk, i) => (
-                  <a
-                    key={`${lnk.label}-${i}`}
-                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
-                    href={lnk.href}
-                    aria-label={lnk.ariaLabel}
-                  >
-                    <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
-                    {lnk.label}
-                  </a>
+                  <Link
+  key={`${lnk.label}-${i}`}
+  to={lnk.href} // React Router link
+  className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
+  aria-label={lnk.ariaLabel}
+  onClick={() => setIsExpanded(false)} // optional: close menu on click
+>
+  <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
+  {lnk.label}
+</Link>
+
                 ))}
               </div>
             </div>

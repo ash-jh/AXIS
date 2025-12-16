@@ -7,8 +7,12 @@ const items = [
     bgColor: "#f0f0f0",
     textColor: "#000",
     links: [
-      { label: "Team", ariaLabel: "About Members" },
-      { label: "Work Snippets", ariaLabel: "Work Snippets" },
+      { label: "Team", ariaLabel: "About Members", href: "/about" },
+      {
+        label: "Work Snippets",
+        ariaLabel: "Work Snippets",
+        href: "/about#snippet",
+      },
     ],
   },
   {
@@ -16,9 +20,17 @@ const items = [
     bgColor: "#f0f0f0",
     textColor: "#000",
     links: [
-      { label: "Phases", ariaLabel: "Featured Projects" },
-      { label: "Concepts behind", ariaLabel: "Concepts behind the project" },
-      { label: "Our Approach", ariaLabel: "Methodology" },
+      { label: "Phases", ariaLabel: "Featured Projects", href: "/project" },
+      {
+        label: "Concepts behind",
+        ariaLabel: "Concepts behind the project",
+        href: "/Project#Concepts",
+      },
+      {
+        label: "Our Approach",
+        ariaLabel: "Methodology",
+        href: "/project#approach",
+      },
     ],
   },
   {
@@ -26,7 +38,7 @@ const items = [
     bgColor: "#f0f0f0",
     textColor: "#000",
     links: [
-      { label: "Concept Paper", ariaLabel: "Paper" },
+      { label: "Concept Paper", ariaLabel: "Paper", href: "/about" },
       { label: "Poster", ariaLabel: "Poster" },
       { label: "Report", ariaLabel: "Report" },
     ],
@@ -55,9 +67,11 @@ const Home = () => {
       <section className="grid pt-30 pb-40 grid-cols-1 md:grid-cols-2 gap-12 px-8 md:px-20 py-24 items-center">
         {/* IMAGE */}
         <div className="flex justify-center">
-          <div className="w-full max-w-md h-72 rounded-xl bg-gray-200 flex items-center justify-center shadow-md">
-            <span className="text-gray-500 text-sm">Project Visual</span>
-          </div>
+          <img
+            src="/public/Gemini_Generated_Image_3yx0js3yx0js3yx0.png"
+            alt="Project Visual"
+            className="w-full max-w-md h-72 rounded-xl object-cover shadow-md"
+          />
         </div>
 
         {/* TEXT */}
@@ -262,8 +276,7 @@ const Home = () => {
         </div>
 
         <div className="mt-10 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} AXIS by RV College of Engineering.
-          All rights reserved.
+          &copy; 2025 AXIS by RV College of Engineering. All rights reserved.
         </div>
       </footer>
     </div>

@@ -87,7 +87,7 @@ const About = () => {
         />{" "}
       </header>
 
-      <section>
+      <section id="snippets">
         <div style={{ height: "700px", position: "relative" }}>
           <InfiniteMenu items={items} />
         </div>
